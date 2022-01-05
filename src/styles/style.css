@@ -1,0 +1,96 @@
+/* Document styles */
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+/* App styles */
+
+body > section:nth-child(1) {
+    flex-basis: 15%;
+}
+body > section:nth-child(2) {
+    flex-basis: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > section:nth-child(2) > aside {
+    flex-basis: 15%;
+    text-align: center;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+article {
+    border-top: 1px solid lightgray;
+    border-right: .1px solid lightsteelblue;
+    box-shadow: 3px 5px 4px -3px rgba(0, 0, 0, 0.2);
+    height: 16.50%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    cursor: pointer;
+}
+
+article:hover {
+    transition: 1s;
+    width: 100% !important;
+}
+
+.paquirri-bot-ico {
+    width: 40%;
+}
+
+aside > h3 {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+
+/* Main styles */
+
+main > div,
+main {
+    flex-basis: 85%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main > div > textarea {
+    width: 150%;
+    height: 70%;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    display: block;
+    margin-top: 20px;
+    background-color: #444;
+    color: #aaa;
+    padding: 20px;
+    font-family: monospace;
+    transition: background 0.25s, color 0.25s;
+}
+
+main > div > textarea:hover,
+main > div > textarea:focus {
+    background: #4a4a4a;
+    color: #eee;
+}
