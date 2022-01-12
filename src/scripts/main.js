@@ -24,8 +24,17 @@ articles.forEach(article => {
 
 
         // Main changes
-        main.innerHTML = activeToolState === 'first-tool' ? tools.CREDIT_CARD_CHECKER 
-        : activeToolState === 'second-tool' ? tools.SIMPLE_API_GET
-        : null;
+        switch(activeToolState) {
+            case 'first-tool':
+                main.innerHTML = tools.CREDIT_CARD_CHECKER;
+                break;
+            case 'second-tool':
+                main.innerHTML = tools.SIMPLE_API_GET;
+                break;
+            case 'third-tool':
+                main.innerHTML = tools.WEB_SCRAPER.WEB_SCRAPER_HTML;
+                tools.WEB_SCRAPER.WEB_SCRAPER_LOGIC();
+                break;
+        }
     });
 });
